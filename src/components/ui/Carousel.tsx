@@ -46,6 +46,7 @@ export function Carousel({ children }: CarouselProps) {
                     : 'bg-primary border border-black' 
                 )
               }
+              aria-label={`Tab ${idx + 1}`}
             />
           ))}
         </TabList>
