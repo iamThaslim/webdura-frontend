@@ -37,17 +37,27 @@ booking-management-module/
 │   ├── components/          # Reusable UI components
 │   │   ├── Header.tsx       # Header with navigation
 │   │   ├── ProductCard.tsx  # Product Card details
-│   │   ├── ReduxProvider.tsx  # Product Card details
-│   │   ├── ServiceAlert.tsx  # Product Card details
-│   │   ├── ServiceDetailed.tsx  # Product Card details
-│   │   └── StepIndicator.tsx# Progress indicator for booking stages
-│   │   └── TabNavigation.tsx# Progress indicator for booking stages
+│   │   ├── ReduxProvider.tsx  # Redux Provider for the app
+│   │   ├── ServiceAlert.tsx  # Service alert component
+│   │   ├── ServiceDetailed.tsx  # Detailed service view
+│   │   ├── StepIndicator.tsx# Progress indicator for booking stages
+│   │   ├── TabNavigation.tsx# Tab navigation component for services
+│   │   ├── ui/              # UI components folder
+│   │   │   ├── Carousel.tsx # Carousel component for service selection
+│   │   │   ├── SearchInput.tsx  # Search input component
+│   │   │   └── SectionHeader.tsx  # Section header component
+│   │   ├── Loading.tsx      # Loading spinner component
 │   ├── data/                # JSON data for services and bookings
 │   │   └── db.ts            # External JSON file for mock data
 │   ├── hooks/               # Custom React hooks
+│   │   ├── useAlert.ts      # Custom hook for alert management
+│   │   ├── useCountByStatus.ts # Custom hook for counting bookings by status
+│   │   └── useFilteredData.ts  # Custom hook for filtering data by status
 │   ├── lib/                 # Utility functions
+│   │   ├── common/          # Common utilities for the app
+│   │   │   └── utils.ts     # General utility functions
 │   │   └── utils/           # Specific utilities for services
-│   │       └──serviceUtils.ts # Slice for service and booking management
+│   │       └── serviceUtils.ts # Slice for service and booking management
 │   ├── store/               # Redux store setup
 │   │   ├── slices/          # Redux slices
 │   │   │   └── serviceSlice.ts # Slice for service and booking management
@@ -55,6 +65,7 @@ booking-management-module/
 │   ├── types/               # TypeScript type definitions
 │   │   └── service.types.ts # Types for services and bookings
 └── README.md                # Project documentation
+
 
 ## Technologies Used
 * React Framework: Built using Next.js.
