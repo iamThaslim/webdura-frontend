@@ -13,6 +13,7 @@ import { useAlert } from "@/hooks/useAlert";
 import { useCountByStatus } from "@/hooks/useCountByStatus";
 import { useFilteredData } from "@/hooks/useFilteredData";
 import { ServiceStatus } from "@/types/service.types";
+import Image from "next/image";
 
 /**
  * A component that displays detailed information about a specific service.
@@ -83,6 +84,7 @@ const ServiceDetailed: React.FC<ServiceDetailedProps> = ({ id }) => {
   };
 
   return (
+    <>
     <div className="mx-auto">
       <div className="mb-4 flex items-center bg-[#3C85B6] relative justify-between px-4 py-2">
         <div className="">
@@ -142,10 +144,12 @@ const ServiceDetailed: React.FC<ServiceDetailedProps> = ({ id }) => {
                 </div>
                 <div className="flex justify-between items-center mb-4">
                   <div className="flex items-center space-x-4">
-                    <img
+                    <Image
                       src={request.customer.profileImage}
                       alt={`${request.customer.name}'s profile`}
                       className="w-10 h-10 rounded-full object-cover"
+                      width={40}
+                      height={40}
                     />
                     <div>
                       <p className="font-semibold text-xs">
@@ -252,6 +256,7 @@ const ServiceDetailed: React.FC<ServiceDetailedProps> = ({ id }) => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

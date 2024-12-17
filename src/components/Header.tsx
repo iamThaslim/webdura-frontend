@@ -105,7 +105,7 @@ function MobileNav() {
  * @returns The header component with a navigation menu, search input, and notifications.
  */
 
-const Header = forwardRef<HTMLDivElement, {}>(function Header(props, ref) {
+const Header = forwardRef<HTMLDivElement | null, React.HTMLAttributes<HTMLDivElement> >(function Header(props, ref) {
   return (
     <Disclosure as="header" className="sticky top-0 z-50 w-full border-b bg-white bg-opacity-95 backdrop-blur supports-[backdrop-filter]:bg-opacity-60">
       {({ open }) => (

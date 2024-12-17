@@ -20,7 +20,7 @@ export function cn(...classes: string[]) {
    */
   export function cnWithProps<T extends Record<string, boolean>>(props: T) {
     return Object.entries(props)
-      .filter(([_, value]) => value)
+      .filter(([value]) => value)
       .map(([key]) => key)
       .join(' ');
   }
